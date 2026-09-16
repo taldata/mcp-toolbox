@@ -441,6 +441,11 @@ func TestPrebuiltFlag(t *testing.T) {
 			args: []string{"--prebuilt", "alloydb-postgres/monitor"},
 			want: []string{"alloydb-postgres/monitor"},
 		},
+		{
+			desc: "bigtable prebuilt toolset flag",
+			args: []string{"--prebuilt", "bigtable/data"},
+			want: []string{"bigtable/data"},
+		},
 	}
 	for _, tc := range tcs {
 		t.Run(tc.desc, func(t *testing.T) {
